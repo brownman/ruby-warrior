@@ -1,5 +1,9 @@
 $: << File.dirname(__FILE__)
 
+require 'rubygems'
+require 'rubygame'
+require 'yaml'
+
 require 'ruby_warrior/core_additions'
 
 require 'ruby_warrior/game'
