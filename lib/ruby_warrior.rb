@@ -41,3 +41,6 @@ require 'ruby_warrior/abilities/listen'
 require 'ruby_warrior/abilities/direction_of_stairs'
 require 'ruby_warrior/abilities/direction_of'
 require 'ruby_warrior/abilities/explode'
+
+#Graphic engine
+require 'graphics/engine.rb'
