@@ -1,6 +1,8 @@
 module RubyWarrior
   class Game
-    
+    def initialize
+      @engine = Engine.new()
+    end
     # TODO refactor and test this method
     def start
       UI.puts "Welcome to Ruby Warrior"
