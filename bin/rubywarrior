@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
+require 'rubygems'
+require 'rubygame'
+require 'yaml'
+
 require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 
+#graphic frontend
+require 'graphics/engine.rb'
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN
 RubyWarrior::UI.delay = 0.8 # TODO allow customization
