@@ -7,6 +7,7 @@ module RubyWarrior
       @profile = profile
       @number = number
       @time_bonus = 0
+      @engine = Engine.new()
     end
     
     def player_path
