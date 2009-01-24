@@ -17,8 +17,6 @@ module RubyWarrior
       
       def puts_with_delay(msg)
         result = puts(msg)
-        sleep(@delay) if @delay
-        result
       end
       
       def print(msg)
