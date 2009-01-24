@@ -34,6 +34,8 @@ module RubyWarrior
     
     def play(turns = 1000)
       load_level
+      @engine.map.set(@floor)
+      @engine.map.create()
       turns.times do |n|
         return if passed? || failed?
         UI.puts "- turn #{n+1} -"
