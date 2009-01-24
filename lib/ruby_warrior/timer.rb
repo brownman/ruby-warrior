@@ -13,6 +13,6 @@ class Timer
     end
   end
   def start
-    @fire_at = Time.now.tv_sec +@interval
+    @fire_at = Time.now.tv_sec + @interval
   end
 end
