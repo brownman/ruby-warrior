@@ -1,7 +1,7 @@
 
 
 class Timer
-  def initialize
+  def initialize seconds , &action
     @interval = seconds
     @action = action
   end
