@@ -1,8 +1,10 @@
 
 
 class Map
-  def initialize
+  def initialize resource
+    @resource = resource
     @map = []
+    @object = []
     @floor = nil
   end
   def set floor
