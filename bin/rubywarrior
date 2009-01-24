@@ -11,6 +11,7 @@ require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 #graphic frontend
 require 'graphics/graphic_resource.rb'
 require 'graphics/engine.rb'
+require 'graphics/tile.rb'
 require 'graphics/map.rb'
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN
