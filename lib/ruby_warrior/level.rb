@@ -43,10 +43,10 @@ module RubyWarrior
       @engine.map.create()
       turns.times do |n|
         return if passed? || failed?
-	UI.puts "turn #{n+1} ="
+	UI.puts "- turn #{n+1} ="
 	UI.print @floor.to_map
 	@floor.units.each { |unit| unit.prepare_turn }
-	@floor.units.each { |unit| unit.prepare_turn }
+	@floor.units.each { |unit| unit.perform_turn }
         yield if block_given?
 	@time_bonus -= 1 if @time_bonus > 0
 	wait()
