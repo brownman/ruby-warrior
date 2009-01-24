@@ -49,7 +49,7 @@ module RubyWarrior
       end
       
       def say(msg)
-        UI.puts_with_delay "#{name} #{msg}"
+        UI.puts "#{name} #{msg}"
       end
       
       def name

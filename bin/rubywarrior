@@ -15,6 +15,5 @@ require 'graphics/tile.rb'
 require 'graphics/map.rb'
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN
-RubyWarrior::UI.delay = 0.8 # TODO allow customization
 game = RubyWarrior::Game.new # TODO pass options into game when initializing
 game.start

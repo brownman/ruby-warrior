@@ -1,8 +1,6 @@
 module RubyWarrior
   class UI
     class << self
-      attr_accessor :delay
-      
       def in_stream=(in_stream)
         @in = in_stream
       end
@@ -14,11 +12,7 @@ module RubyWarrior
       def puts(msg)
         @out.puts(msg) if @out
       end
-      
-      def puts_with_delay(msg)
-        result = puts(msg)
-      end
-      
+      #Remove puts_with_delay method the assocated attribute accessor :delay since it is no longer neccessary and interfere with drawing operations. --Kiba 
       def print(msg)
         @out.print(msg) if @out
       end
