@@ -30,5 +30,6 @@ class Map
   end
   def draw
     @object.draw(@screen)
+    @screen.flip()
   end
 end
