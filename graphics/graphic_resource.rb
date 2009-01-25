@@ -8,4 +8,7 @@ class Graphic_Resource
     yaml_string = File.read(@config_name)
     @config_file = YAML::load(yaml_string)
   end
+  def name name
+    return @config_file['name']
+  end
 end
