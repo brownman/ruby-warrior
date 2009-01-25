@@ -57,6 +57,7 @@ module RubyWarrior
     end
     def wait
        loop do
+	 @engine.map.draw()
 	 @timer.check()
 	 if @state == true
            @state = false
