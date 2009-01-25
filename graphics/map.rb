@@ -1,11 +1,12 @@
 
 
 class Map
-  def initialize resource
+  def initialize resource , screen
     @resource = resource
+    @screen = screen
     @position = Position_Calculate.new()
     @map = []
-    @object = []
+    @object = Rubygame::Sprites::Group.new()
     @floor = nil
   end
   def set floor
@@ -26,5 +27,8 @@ class Map
       end
       n += 1
     end
+  end
+  def draw
+    @object.draw(@screen)
   end
 end
