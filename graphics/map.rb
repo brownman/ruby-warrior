@@ -19,13 +19,12 @@ class Map
     list = @position.get_all_positions(@floor.width,@floor.height)
     @map.each do |map|
       if map == 0
-	object = MapTiles.new(@resource.name('floor.png'))
+	object = Tile.new(@resource.name('floor'))
 	object.rect.x = list[n][0]
 	object.rect.y = list[n][1]
 	@object << object
       end
       n += 1
     end
-    set_location()
   end
 end

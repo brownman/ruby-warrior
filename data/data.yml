@@ -1,4 +1,4 @@
 ---
-wall: wall.png
-floor: floor.png
-player: player.png
+wall: data/wall.png
+floor: data/floor.png
+player: data/player.png

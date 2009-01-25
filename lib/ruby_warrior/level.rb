@@ -41,6 +41,7 @@ module RubyWarrior
       load_level
       @engine.map.set(@floor)
       @engine.map.create()
+      @engine.map.set_map()
       turns.times do |n|
         return if passed? || failed?
 	UI.puts "- turn #{n+1} ="

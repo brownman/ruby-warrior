@@ -7,19 +7,20 @@ class Position_Calculate
     return x , y
   end
   def get_all_positions width , height
+    width , height = translate_into_position(width , height)
     x = 0
     y = 0
     list_of_location = []
     loop do
-      x += 50
       if x == width
 	x = 0
         y += 50
       end
       if y == height
-        return
+        break
       end
       list_of_location << [x,y]
+      x += 50
     end
     return list_of_location
   end
