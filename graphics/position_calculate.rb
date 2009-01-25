@@ -6,15 +6,18 @@ class Position_Calculate
     y = y * 50
     return x , y
   end
-  def get_position_from_value width , height , v
+  def get_all_positions width , height
     x = 0
     y = 0
     list_of_location = []
-    v.times do
+    loop do
       x += 50
       if x == width
 	x = 0
         y += 50
+      end
+      if y == height
+        return
       end
       list_of_location << [x,y]
     end
