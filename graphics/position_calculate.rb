@@ -1,6 +1,6 @@
 
 
-def Position_Calculate
+class Position_Calculate
   def translate_into_position x , y
     x = x * 50
     y = y * 50
