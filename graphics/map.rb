@@ -20,12 +20,13 @@ class Map
     n = 0
     list = @position.get_all_positions(@floor.width,@floor.height)
     @map.each do |map|
-      if map == 0
+      case map
+      when 0
 	object = Tile.new(@resource.name('floor'))
-	object.rect.x = list[n][0]
-	object.rect.y = list[n][1]
-	@object << object
       end
+      object.rect.x = list[n][0]
+      object.rect.y = list[n][1]
+      @object << object
       n += 1
     end
     stair_set()
