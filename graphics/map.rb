@@ -11,6 +11,7 @@ class Map
   end
   def set floor
     @floor = floor
+    @stair = @floor.stairs_location
   end
   def create
     @map = Array.new(@floor.width*@floor.height,0)
@@ -27,6 +28,14 @@ class Map
       end
       n += 1
     end
+    stair_set()
+  end
+  def stair_set
+    stair = Tile.new(@resource.name('stair'))
+    x , y = @position.translate_into_position(@stair[0],@stair[1])
+    stair.rect.x = x
+    stair.rect.y = y
+    @object << stair
   end
   def draw
     @object.draw(@screen)
