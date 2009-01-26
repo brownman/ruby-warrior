@@ -2,3 +2,4 @@
 wall: data/wall.png
 floor: data/floor.png
 player: data/player.png
+stair: data/stair.png
