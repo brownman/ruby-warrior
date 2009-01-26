@@ -23,6 +23,8 @@ class Map
       case map
       when 0
 	object = Tile.new(@resource.name('floor'))
+      when 1
+	object = Tile.new(@resource.name('wall'))
       end
       object.rect.x = list[n][0]
       object.rect.y = list[n][1]
