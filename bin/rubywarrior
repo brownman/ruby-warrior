@@ -13,7 +13,7 @@ require 'graphics/graphic_resource.rb'
 require 'graphics/engine.rb'
 require 'graphics/tile.rb'
 require 'graphics/position_calculate.rb'
-require 'graphics/map.rb'
+require 'graphics/maps.rb'
 require 'graphics/units.rb'
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN

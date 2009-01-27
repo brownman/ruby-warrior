@@ -39,9 +39,9 @@ module RubyWarrior
     
     def play(turns = 1000)
       load_level
-      @engine.map.set(@floor)
-      @engine.map.create()
-      @engine.map.set_map()
+      @engine.maps.set(@floor)
+      @engine.maps.create()
+      @engine.maps.set_map()
       turns.times do |n|
         return if passed? || failed?
 	UI.puts "- turn #{n+1} ="
@@ -57,7 +57,7 @@ module RubyWarrior
     end
     def wait
        loop do
-	 @engine.map.draw()
+	 @engine.maps.draw()
 	 @timer.check()
 	 if @state == true
            @state = false

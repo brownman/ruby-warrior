@@ -1,6 +1,6 @@
 
 
-class Map
+class Maps
   def initialize resource , screen
     @resource = resource
     @screen = screen
