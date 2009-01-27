@@ -11,10 +11,11 @@ class Map
   end
   def set floor
     @floor = floor
-    @stair = @floor.stairs_location
   end
   def create
     @map = Array.new(@floor.width*@floor.height,0)
+    stair = @position.find_element(@floor.stairs_location[0]*50,@floor.stairs_location[1]*50)
+    @map[stair] = 2
   end
   def set_map
     n = 0
@@ -25,20 +26,14 @@ class Map
 	object = Tile.new(@resource.name('floor'))
       when 1
 	object = Tile.new(@resource.name('wall'))
+      when 2
+	object = Tile.new(@resource.name('stair'))
       end
       object.rect.x = list[n][0]
       object.rect.y = list[n][1]
       @object << object
       n += 1
     end
-    stair_set()
-  end
-  def stair_set
-    stair = Tile.new(@resource.name('stair'))
-    x , y = @position.translate_into_position(@stair[0],@stair[1])
-    stair.rect.x = x
-    stair.rect.y = y
-    @object << stair
   end
   def draw
     @object.draw(@screen)
