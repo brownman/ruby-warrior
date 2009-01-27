@@ -6,6 +6,22 @@ class Position_Calculate
     y = y * 50
     return x , y
   end
+  def find_element x , y
+    n = 0
+    x_rect = 0
+    y_rect = 0
+    loop do
+     if x_rect == x
+       x_rect = 0
+       y_rect += 50
+     end
+     if y_rect == y
+       break
+     end
+     x += 50
+     n += 1
+    end
+  end
   def get_all_positions width , height
     width , height = translate_into_position(width , height)
     x = 0
