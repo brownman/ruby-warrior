@@ -6,5 +6,6 @@ class Engine
     @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @resource = Graphic_Resource.new()
     @map = Map.new(@resource,@screen)
+    @units = Units.new(@resource,@screen)
   end
 end
