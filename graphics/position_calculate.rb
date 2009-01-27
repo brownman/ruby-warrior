@@ -13,14 +13,15 @@ class Position_Calculate
     loop do
      if x_rect == x
        x_rect = 0
+       if y_rect == y
+	 break
+       end
        y_rect += 50
      end
-     if y_rect == y
-       break
-     end
-     x += 50
+     x_rect += 50
      n += 1
     end
+    return n
   end
   def get_all_positions width , height
     width , height = translate_into_position(width , height)
