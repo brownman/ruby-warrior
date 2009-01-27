@@ -6,7 +6,7 @@ class Map
     @screen = screen
     @position = Position_Calculate.new()
     @map = []
-    @object = Rubygame::Sprites::Group.new()
+    @map_object = Rubygame::Sprites::Group.new()
     @floor = nil
   end
   def set floor
@@ -23,20 +23,20 @@ class Map
     @map.each do |map|
       case map
       when 0
-	object = Tile.new(@resource.name('floor'))
+	tile = Tile.new(@resource.name('floor'))
       when 1
-	object = Tile.new(@resource.name('wall'))
+	tile = Tile.new(@resource.name('wall'))
       when 2
-	object = Tile.new(@resource.name('stair'))
+	tile = Tile.new(@resource.name('stair'))
       end
-      object.rect.x = list[n][0]
-      object.rect.y = list[n][1]
-      @object << object
+      tile.rect.x = list[n][0]
+      tile.rect.y = list[n][1]
+      @map_object << tile
       n += 1
     end
   end
   def draw
-    @object.draw(@screen)
+    @map_object.draw(@screen)
     @screen.flip()
   end
 end
