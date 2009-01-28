@@ -4,3 +4,4 @@ floor: data/floor.png
 player: data/player.png
 stair: data/stair.png
 captive: data/captive.png
+enemy: data/enemy.png
