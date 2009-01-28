@@ -42,6 +42,7 @@ module RubyWarrior
       @engine.maps.set(@floor)
       @engine.maps.create()
       @engine.maps.set_map()
+      @engine.units.set_player(@warrior)
       turns.times do |n|
         return if passed? || failed?
 	UI.puts "- turn #{n+1} ="

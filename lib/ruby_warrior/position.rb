@@ -10,7 +10,9 @@ module RubyWarrior
       @y = y
       @direction_index = DIRECTIONS.index(direction || :north)
     end
-    
+    def location
+      return [@x , @y]
+    end
     def at?(x, y)
       @x == x && @y == y
     end
