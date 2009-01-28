@@ -51,6 +51,7 @@ module RubyWarrior
 	@floor.units.each { |unit| unit.perform_turn }
         yield if block_given?
 	@time_bonus -= 1 if @time_bonus > 0
+	@engine.units.update()
 	wait()
       end
     end

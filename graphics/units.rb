@@ -5,10 +5,13 @@ class Units
     @resource = resource
     @screen = screen
     @position = Position_Calculate.new()
+    @player = Tile.new(@resource.name("player"))
   end
   def set_player warrior
-    pos = warrior.position.location()
-    @player = Tile.new(@resource.name("player"))
+    @warrior = warrior
+  end
+  def update
+    pos = @warrior.position.location()
     x , y = @position.translate_into_position(pos[0],pos[1])
     @player.rect.x = x
     @player.rect.y = y
