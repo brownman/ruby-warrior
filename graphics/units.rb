@@ -6,10 +6,19 @@ class Units
     @screen = screen
     @position = Position_Calculate.new()
     @player = Tile.new(@resource.name("player"))
-    @enemies = Array.new()
+    @units = Array.new()
   end
   def set_player warrior
     @warrior = warrior
+  end
+  def set_units units
+    if units.to_map() == "s"
+      sludge = Tile.new(@resource.name("sludge")
+      pos = sludge.position.location()
+      x , y = position.translate_into_position(pos[0],pos[1])
+      sludge.rect.x = x
+      sludge.rect.y = y
+    end
   end
   def update
     if @warrior.alive? == false
