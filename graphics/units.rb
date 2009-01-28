@@ -6,6 +6,7 @@ class Units
     @screen = screen
     @position = Position_Calculate.new()
     @player = Tile.new(@resource.name("player"))
+    @enemies = Array.new()
   end
   def set_player warrior
     @warrior = warrior
