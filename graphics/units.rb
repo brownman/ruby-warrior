@@ -11,6 +11,9 @@ class Units
     @warrior = warrior
   end
   def update
+    if @warrior.alive? == false
+      return
+    end
     pos = @warrior.position.location()
     x , y = @position.translate_into_position(pos[0],pos[1])
     @player.rect.x = x
