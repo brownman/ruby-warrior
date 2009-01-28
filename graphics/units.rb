@@ -13,4 +13,7 @@ class Units
     @player.rect.x = x
     @player.rect.y = y
   end
+  def draw
+    @player.draw(screen)
+  end
 end
