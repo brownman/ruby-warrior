@@ -14,6 +14,6 @@ class Units
     @player.rect.y = y
   end
   def draw
-    @player.draw(screen)
+    @player.draw(@screen)
   end
 end
