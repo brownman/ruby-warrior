@@ -8,4 +8,9 @@ class Engine
     @maps = Maps.new(@resource,@screen)
     @units = Units.new(@resource,@screen)
   end
+  def draw
+    @maps.draw()
+    @units.draw()
+    @screen.flip()
+  end
 end

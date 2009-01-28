@@ -54,11 +54,9 @@ module RubyWarrior
 	wait()
       end
     end
-    def draw
-    end
     def wait
        loop do
-	 @engine.maps.draw()
+	 @engine.draw()
 	 @timer.check()
 	 if @state == true
            @state = false
