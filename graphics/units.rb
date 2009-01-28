@@ -6,7 +6,7 @@ class Units
     @screen = screen
     @position = Position_Calculate.new()
     @player = Tile.new(@resource.name("player"))
-    @units = Array.new()
+    @units = Rubygame::Sprites::Group.new()
   end
   def set_player warrior
     @warrior = warrior
@@ -19,6 +19,7 @@ class Units
         x , y = @position.translate_into_position(pos[0],pos[1])
         sludge.rect.x = x
         sludge.rect.y = y
+	@units << sludge
       end
     end
   end
@@ -33,5 +34,6 @@ class Units
   end
   def draw
     @player.draw(@screen)
+    @units.draw(@screen)
   end
 end
