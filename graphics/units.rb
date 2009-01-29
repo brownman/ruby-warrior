@@ -13,14 +13,17 @@ class Units
   end
   def set_units units
     units.each do |unit|
-      if unit.to_map() == "s"
-        sludge = Tile.new(@resource.name("sludge"))
-        pos = unit.position.location()
-        x , y = @position.translate_into_position(pos[0],pos[1])
-        sludge.rect.x = x
-        sludge.rect.y = y
-	@units << sludge
+      case unit.to_map()
+      when "s"
+        sprite = UnitSprite.new(@resource.name("sludge"),unit)
+      when "@"
+	sprite = UnitSprite.new(@resource.name("player"),unit)
       end
+      pos = unit.position.location()
+      x , y = @position.translate_into_position(pos[0],pos[1])
+      sprite.rect.x = x
+      sprite.rect.y = y
+      @units << sprite
     end
   end
   def update

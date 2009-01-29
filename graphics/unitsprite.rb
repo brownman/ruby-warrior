@@ -1,5 +1,6 @@
 
 class UnitSprite
+  include Rubygame::Sprites::Sprite
   def initialize image , unit
     super()
     @unit = unit
