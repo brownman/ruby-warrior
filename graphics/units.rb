@@ -19,24 +19,20 @@ class Units
       when "@"
 	sprite = UnitSprite.new(@resource.name("player"),unit)
       end
-      pos = unit.position.location()
-      x , y = @position.translate_into_position(pos[0],pos[1])
-      sprite.rect.x = x
-      sprite.rect.y = y
       @units << sprite
     end
   end
   def update
-    if @warrior.alive? == false
-      return
+    @units.each do |sprite|
+      if sprite.unit.alive?
+	pos = sprite.unit.position.location()
+	x , y = @position.translate_into_position(pos[0],pos[1])
+	sprite.rect.x = x
+	sprite.rect.y = y
+      end
     end
-    pos = @warrior.position.location()
-    x , y = @position.translate_into_position(pos[0],pos[1])
-    @player.rect.x = x
-    @player.rect.y = y
   end
   def draw
-    @player.draw(@screen)
     @units.draw(@screen)
   end
 end
