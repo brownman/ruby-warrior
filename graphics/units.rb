@@ -29,6 +29,8 @@ class Units
 	x , y = @position.translate_into_position(pos[0],pos[1])
 	sprite.rect.x = x
 	sprite.rect.y = y
+      else
+	@units.delete(sprite)
       end
     end
   end
