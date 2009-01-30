@@ -18,6 +18,8 @@ class Units
         sprite = UnitSprite.new(@resource.name("sludge"),unit)
       when "@"
 	sprite = UnitSprite.new(@resource.name("player"),unit)
+      when "C"
+	sprite = UnitSprite.new(@resource.name("captive"),unit)
       end
       @units << sprite
     end
