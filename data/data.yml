@@ -5,3 +5,5 @@ player: data/player.png
 stair: data/stair.png
 captive: data/captive.png
 sludge: data/sludge.png
+thick_sludge: data/thick_sludge.png
+archer: data/archer.png
