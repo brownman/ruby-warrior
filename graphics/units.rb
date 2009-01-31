@@ -16,6 +16,10 @@ class Units
       case unit.to_map()
       when "s"
         sprite = UnitSprite.new(@resource.name("sludge"),unit)
+      when "S"
+	sprite = UnitSprite.new(@resource.name("thick_sludge"),unit)
+      when "a"
+	sprite = UnitSprite.new(@resource.name("archer"),unit)
       when "@"
 	sprite = UnitSprite.new(@resource.name("player"),unit)
       when "C"
