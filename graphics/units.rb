@@ -8,9 +8,6 @@ class Units
     @player = Tile.new(@resource.name("player"))
     @units = Rubygame::Sprites::Group.new()
   end
-  def set_player warrior
-    @warrior = warrior
-  end
   def set_units units
     units.each do |unit|
       case unit.to_map()
