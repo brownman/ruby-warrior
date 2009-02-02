@@ -14,7 +14,7 @@ class Maps
   end
   def create
     @map = Array.new(@floor.width*@floor.height,0)
-    stair = @position.find_element(@floor.stairs_location[0]*50,@floor.stairs_location[1]*50)
+    stair = @position.find_element(@floor.stairs_location, [@floor.width,@floor.height])
     @map[stair] = 2
   end
   def set_map

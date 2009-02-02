@@ -6,20 +6,25 @@ class Position_Calculate
     y = y * 50
     return x , y
   end
-  def find_element x , y
+  def find_element stair , map
+    map_x , map_y = translate_into_position(map[0],map[1])
+    stair_x , stair_y = translate_into_position(stair[0],stair[1])
+    x = 0
+    y = 0
     n = 0
-    x_rect = 0
-    y_rect = 0
     loop do
-     if x_rect == x
-       x_rect = 0
-       if y_rect == y
-	 break
-       end
-       y_rect += 50
-     end
-     x_rect += 50
-     n += 1
+      if stair_x == x && stair_y == y
+	break
+      end
+      if x == map_x
+	x = 0
+	y += 50
+      end
+      if y == map_y
+       	break
+      end
+      x += 50
+      n += 1
     end
     return n
   end
