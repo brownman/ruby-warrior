@@ -36,14 +36,15 @@ module RubyWarrior
       load_level
       PlayerGenerator.new(self).generate
     end
-    
-    def play(turns = 1000)
-      load_level
+    def engine_set
       @engine.maps.set(@floor)
       @engine.maps.create()
       @engine.maps.set_map()
-      @engine.units.set_player(@warrior)
       @engine.units.set_units(@floor.units)
+    end
+    def play(turns = 1000)
+      load_level
+      engine_set()
       turns.times do |n|
         return if passed? || failed?
 	UI.puts "- turn #{n+1} ="
