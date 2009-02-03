@@ -9,6 +9,7 @@ include Rubygame
 require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 
 #graphic frontend
+require 'graphics/config.rb'
 require 'graphics/graphic_resource.rb'
 require 'graphics/engine.rb'
 require 'graphics/tile.rb'
