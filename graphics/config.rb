@@ -10,6 +10,7 @@ class Configuration
   end
   def start?
     if @config["graphic"] == true
+      @runnable = true
       return true
     end
   end
