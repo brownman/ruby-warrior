@@ -1,1 +1,9 @@
-If you wishes to use the graphical engine for ruby-warrior, you can do so by changing the graphic option in config.yml to true.
+If you wishes to use the graphical engine for ruby-warrior, you must have rubygame installed. You will need to turn on the engine for it to run in graphic mode. Change the graphic option in data/config.yml to true to do so.
+
+Below are installation instructions for Rubygame:
+
+==Debian based GNU/Linux Distro==
+You will need Rubygem to accomplish this task.
+
+1. To install rubygame:
+  1. sudo apt-get install libsdl1.2-all libsdl1.2-dev libsdl-gfx1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
