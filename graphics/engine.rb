@@ -3,8 +3,8 @@
 class Engine
   attr_accessor :maps , :units
   def initialize
-    @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @resource = Graphic_Resource.new()
+    @screen = Screen.new([800,600],0,[Rubygame::HWSURFACE,Rubygame::DOUBLEBUF])
     @maps = Maps.new(@resource,@screen)
     @units = Units.new(@resource,@screen)
   end
