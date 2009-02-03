@@ -37,10 +37,17 @@ module RubyWarrior
       PlayerGenerator.new(self).generate
     end
     def engine_set
-      @engine.maps.set(@floor)
-      @engine.maps.create()
-      @engine.maps.set_map()
-      @engine.units.set_units(@floor.units)
+      if @engine.runnable == true
+        @engine.maps.set(@floor)
+        @engine.maps.create()
+        @engine.maps.set_map()
+        @engine.units.set_units(@floor.units)
+      end
+    end
+    def engine_update
+      if @engine.runnable == true
+	@engine.units.update()
+      end
     end
     def play(turns = 1000)
       load_level
