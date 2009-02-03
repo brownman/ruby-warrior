@@ -7,7 +7,7 @@ require 'yaml'
 require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 
 #graphic frontend
-require 'graphics/config.rb'
+require 'graphics/configuration.rb'	
 config = Configuration.new()
 if config.start?
   require "rubygame"
