@@ -19,6 +19,7 @@ if config.start?
   require 'graphics/maps.rb'
   require 'graphics/unitsprite.rb'
   require 'graphics/units.rb'
+  require 'graphics/stat.rb'
 end
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN
