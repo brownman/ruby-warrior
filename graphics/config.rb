@@ -13,5 +13,6 @@ class Configuration
       @runnable = true
       return true
     end
+    return false
   end
 end
