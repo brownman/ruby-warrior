@@ -7,7 +7,10 @@ module RubyWarrior
       @profile = profile
       @number = number
       @time_bonus = 0
-      @engine = Engine.new()
+      @config = Configuration.new()
+      if @config.start?
+        @engine = Engine.new()
+      end
       @state = false
       @timer = Timer.new(1) {
         @state = true
@@ -37,7 +40,7 @@ module RubyWarrior
       PlayerGenerator.new(self).generate
     end
     def engine_set
-      if @engine.runnable == true
+      if @config.runnable == true
         @engine.maps.set(@floor)
         @engine.maps.create()
         @engine.maps.set_map()
@@ -45,7 +48,7 @@ module RubyWarrior
       end
     end
     def engine_update
-      if @engine.runnable == true
+      if @config.runnable == true
 	@engine.units.update()
       end
     end

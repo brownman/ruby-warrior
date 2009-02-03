@@ -2,21 +2,24 @@
 
 #Dependency
 require 'rubygems'
-require 'rubygame'
 require 'yaml'
-include Rubygame
 
 require File.dirname(__FILE__) + '/../lib/ruby_warrior'
 
 #graphic frontend
 require 'graphics/config.rb'
-require 'graphics/graphic_resource.rb'
-require 'graphics/engine.rb'
-require 'graphics/tile.rb'
-require 'graphics/position_calculate.rb'
-require 'graphics/maps.rb'
-require 'graphics/unitsprite.rb'
-require 'graphics/units.rb'
+config = Configuration.new()
+if config.start?
+  require "rubygame"
+  include Rubygame
+  require 'graphics/graphic_resource.rb'
+  require 'graphics/engine.rb'
+  require 'graphics/tile.rb'
+  require 'graphics/position_calculate.rb'
+  require 'graphics/maps.rb'
+  require 'graphics/unitsprite.rb'
+  require 'graphics/units.rb'
+end
 RubyWarrior::UI.out_stream = STDOUT
 RubyWarrior::UI.in_stream = STDIN
 game = RubyWarrior::Game.new # TODO pass options into game when initializing
