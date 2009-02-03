@@ -52,6 +52,11 @@ module RubyWarrior
 	@engine.units.update()
       end
     end
+    def engine_draw
+      if @config.runnable == true
+	@engine.draw()
+      end
+    end
     def play(turns = 1000)
       load_level
       engine_set()
@@ -69,7 +74,7 @@ module RubyWarrior
     end
     def wait
        loop do
-	 @engine.draw()
+	 engine_draw()
 	 @timer.check()
 	 if @state == true
            @state = false
