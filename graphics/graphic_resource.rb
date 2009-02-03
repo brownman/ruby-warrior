@@ -15,4 +15,7 @@ class Graphic_Resource
   def name name
     return @data_file[name]
   end
+  def start?
+    return @config_file["graphic"]
+  end
 end
