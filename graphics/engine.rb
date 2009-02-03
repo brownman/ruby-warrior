@@ -13,8 +13,10 @@ class Engine
     end
   end
   def draw
-    @maps.draw()
-    @units.draw()
-    @screen.flip()
+    if @runnable == true
+      @maps.draw()
+      @units.draw()
+      @screen.flip()
+    end
   end
 end
