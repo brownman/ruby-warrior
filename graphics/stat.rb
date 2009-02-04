@@ -1,7 +1,10 @@
 
 class Stat
-  def initialize warrior
+  def initialize
     @text = Text.new()
+    @warrior = nil
+  end
+  def set_warrior warrior
     @warrior = warrior
   end
 end
