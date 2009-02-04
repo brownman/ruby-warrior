@@ -5,7 +5,6 @@ class Units
     @resource = resource
     @screen = screen
     @position = Position_Calculate.new()
-    @player = Tile.new(@resource.name("player"))
     @units = Rubygame::Sprites::Group.new()
   end
   def set_units units
