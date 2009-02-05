@@ -5,5 +5,6 @@ Below are installation instructions for Rubygame:
 ==Debian based GNU/Linux Distro==
 You will need Rubygem to accomplish this task.
 
-1. To install rubygame:
-  1. sudo apt-get install libsdl1.2-all libsdl1.2-dev libsdl-gfx1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
+1. sudo apt-get install libsdl1.2-all libsdl1.2-dev libsdl-gfx1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev
+1.2 You may also need to install libsdl1.2debian-pulseaudio
+2. sudo gem install rubygame --platform=ruby
