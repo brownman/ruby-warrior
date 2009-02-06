@@ -1,4 +1,5 @@
-If you wishes to use the graphical engine for ruby-warrior, you must have rubygame installed. You will need to turn on the engine for it to run in graphic mode. Change the graphic option in data/config.yml to true to do so.
+If you wishes to use the graphical engine for ruby-warrior, you must have rubygame installed. You will need to turn on the engine for it to run in graphic mode. 
+Change the graphic option in data/config.yml to true to do so. The graphic front end does not replace the ACSII version but instead complement it. 
 
 Below are installation instructions for Rubygame:
 
